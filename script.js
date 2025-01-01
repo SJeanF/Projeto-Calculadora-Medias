@@ -47,7 +47,7 @@ function adicionaLinha () {
         linhas += linha
 
     }
-    
+
     elementAtividade.value = ''
     elementNota.value = ''
 }
@@ -70,6 +70,6 @@ function calculaMediaFinal() {
 function atualizaMedia() {
     const mediaFinal = calculaMediaFinal();
 
-    document.getElementById('media-final-valor').innerHTML = mediaFinal
+    document.getElementById('media-final-valor').innerHTML = mediaFinal.toFixed(2)
     document.getElementById('media-final-resultado').innerHTML = mediaFinal >= notaMinima ? '<span class="resultado aprovado">Aprovado</span>' : '<span class="resultado reprovado">Reprovado</span>'
 }
